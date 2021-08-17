@@ -1,0 +1,76 @@
+
+.addTaskForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.taskNameInput, .descriptionInput, .addTaskFormOptions{
+  width: auto;
+  border: none;
+  padding: 12px;
+}
+
+.taskNameInput {
+  font-size: 15px;
+  padding-bottom: 0px;
+}
+
+.descriptionInput {
+  padding-bottom: 40px;
+}
+
+.taskNameInput:focus, .descriptionInput:focus {
+  outline: none;
+}
+
+.addTaskForm .datePicker {
+  border: 1px solid lightgray;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.addTaskForm .listType {
+  border: 1px solid lightgray;
+  margin-left: 6px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.addTaskForm .optionsRight {
+  float: right;
+}
+
+.addTaskForm i {
+  padding: 6px;
+}
+
+.addTaskForm i:hover {
+  background-color: lightgray;
+  border-radius: 3px;
+}
+
+.addTaskFormFinalOptions {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.addTaskFormButton, .cancelFormButton {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.addTaskFormButton {
+  background-color: #DB4C3F;
+  color: white;
+}
+
+.cancelFormButton {
+  border: 1px solid lightgray;
+  background-color: #ffffff;
+}

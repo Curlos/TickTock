@@ -1,22 +1,20 @@
-class TodoItem {
-  name: string
-  complete: boolean
-  dueDate: string
-  listType: string
-  constructor(name: string, complete: boolean, dueDate: string, listType: string ) {
-    this.name = name
-    this.complete = complete
-    this.dueDate = dueDate
-    this.listType = listType
-  }
+import TodoItem from './classes/TodoItem'
 
-  setName(name: string) {
-    this.name = name
-  }
+const displayFormButton = document.querySelector('.displayFormButton')
+const allTasks = []
 
-  toggleComplete() {
-    this.complete = !this.complete
-  }
+const handleAddTask = () => {
+
 }
+
+const displayAddTaskForm = () => {
+  
+}
+
+displayFormButton.addEventListener('click', displayAddTaskForm)
+
+const task = new TodoItem('new task', false, '', '', [''], '')
+allTasks.push(task)
+console.log(task)
 
 console.log('hello')

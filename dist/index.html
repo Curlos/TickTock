@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styleSideHeader.css">
   <link rel="stylesheet" href="styleTasks.css">
+  <link rel="stylesheet" href="styleAddTaskForm.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>TickTasks</title>
+  <title>TickTask</title>
 </head>
 <body>
   <div class="topnav">
@@ -56,6 +57,33 @@
       </div>
       
     </div>
+
+    <div class="addTaskForm">
+      <input type='text' class="taskNameInput" placeholder="Task name">
+      <input type='text' class="descriptionInput" placeholder="Description">
+      <div class="addTaskFormOptions">
+        <span class="optionsLeft">
+          <span class="datePicker">Today</span>
+          <span class="listType">Inbox</span>
+        </span>
+
+        <span class="optionsRight">
+          <span class="labelPicker">
+            <i class="fas fa-tag"></i>
+          </span>
+          <span class="priorityPicker">
+            <i class="far fa-flag"></i>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="addTaskFormFinalOptions">
+      <button class="addTaskFormButton">Add task</button>
+      <button class="cancelFormButton">Cancel</button>
+    </div>
+
+    <div class="displayFormButton"><i class="fas fa-plus"></i> Add task</div>
   </div>
 </body>
 <script src="main.js"></script>
