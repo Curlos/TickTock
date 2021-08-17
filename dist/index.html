@@ -35,50 +35,31 @@
       <span class="listDate">Mon Aug 16</span>
     </div>
     
-    <div class="taskList">
-      <div class="taskItem">
-        <input type="checkbox">
-        <span class="taskName">Need to finish this project by today</span>
-      </div>
+    <div class="taskList"></div>
 
-      <div class="taskItem">
-        <input type="checkbox">
-        <span class="taskName">Need to finish this project by today</span>
-      </div>
+    <div class="addTaskForm hidden">
+      <form class="form">
+        <input type='text' class="taskNameInput" placeholder="Task name"></br>
+        <input type='text' class="descriptionInput" placeholder="Description">
+        <div class="addTaskFormOptions">
+          <span class="optionsLeft">
+            <span class="datePicker">Today</span>
+            <span class="listType">Inbox</span>
+          </span>
 
-      <div class="taskItem">
-        <input type="checkbox">
-        <span class="taskName">Need to finish this project by today</span>
-      </div>
-
-      <div class="taskItem">
-        <input type="checkbox">
-        <span class="taskName">Need to finish this project by today</span>
-      </div>
-      
+          <span class="optionsRight">
+            <span class="labelPicker">
+              <i class="fas fa-tag"></i>
+            </span>
+            <span class="priorityPicker">
+              <i class="far fa-flag"></i>
+            </span>
+          </span>
+        </div>
+      </form>
     </div>
 
-    <div class="addTaskForm">
-      <input type='text' class="taskNameInput" placeholder="Task name">
-      <input type='text' class="descriptionInput" placeholder="Description">
-      <div class="addTaskFormOptions">
-        <span class="optionsLeft">
-          <span class="datePicker">Today</span>
-          <span class="listType">Inbox</span>
-        </span>
-
-        <span class="optionsRight">
-          <span class="labelPicker">
-            <i class="fas fa-tag"></i>
-          </span>
-          <span class="priorityPicker">
-            <i class="far fa-flag"></i>
-          </span>
-        </span>
-      </div>
-    </div>
-
-    <div class="addTaskFormFinalOptions">
+    <div class="addTaskFormFinalOptions hidden">
       <button class="addTaskFormButton">Add task</button>
       <button class="cancelFormButton">Cancel</button>
     </div>

@@ -1,3 +1,11 @@
+.displayFormButton:hover {
+  cursor: pointer;
+  color: #DA4C3F;
+}
+
+.displayFormButton i {
+  margin-right: 4px;
+}
 
 .addTaskForm {
   display: flex;
@@ -6,6 +14,10 @@
   border: 1px solid lightgray;
   border-radius: 5px;
   margin-bottom: 8px;
+}
+
+.hidden {
+  display: none;
 }
 
 .taskNameInput, .descriptionInput, .addTaskFormOptions{

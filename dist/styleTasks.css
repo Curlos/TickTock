@@ -18,15 +18,6 @@
   width: 50%;
 }
 
-.displayFormButton:hover {
-  cursor: pointer;
-  color: #DA4C3F;
-}
-
-.displayFormButton i {
-  margin-right: 4px;
-}
-
 .taskItem {
   padding: 20px 0px 20px 0px;
   border-bottom: 1px solid lightgray;

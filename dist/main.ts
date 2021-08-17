@@ -57,17 +57,21 @@ var TodoItem = /** @class */ (function () {
 
 ;// CONCATENATED MODULE: ./src/index.ts
 
+var addTaskForm = document.querySelector('.addTaskForm');
 var displayFormButton = document.querySelector('.displayFormButton');
 var allTasks = [];
 var handleAddTask = function () {
 };
 var displayAddTaskForm = function () {
+    console.log('toggle');
+    addTaskForm.classList.toggle('hidden');
+    displayFormButton.classList.toggle('hidden');
 };
 displayFormButton.addEventListener('click', displayAddTaskForm);
 var task = new classes_TodoItem('new task', false, '', '', [''], '');
 allTasks.push(task);
 console.log(task);
-console.log('hello');
+console.log('hello fag');
 
 /******/ })()
 ;
