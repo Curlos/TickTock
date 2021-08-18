@@ -70,14 +70,14 @@
   margin-bottom: 10px;
 }
 
-.addTaskFormButton, .cancelFormButton {
+.addTaskFormButton, .cancelFormButton, .saveTaskFormButton {
   padding: 10px;
   border: none;
   border-radius: 6px;
   font-size: 15px;
 }
 
-.addTaskFormButton {
+.addTaskFormButton, .saveTaskFormButton {
   background-color: #DB4C3F;
   color: white;
 }
@@ -87,6 +87,14 @@
   background-color: #ffffff;
 }
 
-.addTaskFormButton:hover, .cancelFormButton:hover {
+.addTaskFormButton:hover, .cancelFormButton:hover, .saveTaskFormButton:hover {
   cursor: pointer;
+}
+
+.editTaskForm {
+  width: auto;
+}
+
+.saveTaskFormButton {
+  margin-right: 5px;
 }

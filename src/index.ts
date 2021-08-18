@@ -1,4 +1,5 @@
 import TodoItem from './classes/TodoItem'
+import { createEditTaskForm, editTaskFormFinalOptions } from './taskForm' 
 
 const taskList = document.querySelector('.taskList')
 const formForAddTaskForm = document.querySelector('.addTaskForm .form')
@@ -9,6 +10,7 @@ const addTaskFormButton = document.querySelector('.addTaskFormButton')
 const displayFormButton = document.querySelector('.displayFormButton')
 const cancelFormButton = document.querySelector('.cancelFormButton')
 const checkboxes: NodeListOf<Element> = document.querySelectorAll('.taskItem input')
+const editButtons: NodeListOf<Element> = document.querySelectorAll('i')
 const toggleSidebarButton = document.querySelector('.toggleSidebarButton')
 const allTasks: Array<TodoItem> = []
 
@@ -40,6 +42,9 @@ const displayNewTask = () => {
   taskList.append(taskItem)
 
   taskNameInput.value = ''
+
+  taskList.append(createEditTaskForm())
+  taskList.append(editTaskFormFinalOptions())
 
 
 // <div class="taskItem">
@@ -77,12 +82,18 @@ const generateDefaultTasks = () => {
   console.log(allTasks)
 }
 
+const editTask = () => {
+  console.log('edit')
+  
+}
+
 const toggleSidebar = () => {
   document.querySelector<HTMLElement>(".sidenav").classList.toggle('openSidebar')
   document.querySelector<HTMLElement>(".mainContainer").classList.toggle('openMainContainer')
 }
 
 checkboxes.forEach((checkbox) => checkbox.addEventListener('click', completeTask))
+editButtons.forEach((editButton) => editButton.addEventListener('click', editTask))
 toggleSidebarButton.addEventListener('click', toggleSidebar)
 displayFormButton.addEventListener('click', toggleAddTaskForm)
 addTaskFormButton.addEventListener('click', addTask)
@@ -90,3 +101,6 @@ formForAddTaskForm.addEventListener('submit', addTask)
 cancelFormButton.addEventListener('click', toggleAddTaskForm)
 
 generateDefaultTasks()
+
+
+console.log(editButtons)
