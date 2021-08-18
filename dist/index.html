@@ -13,7 +13,7 @@
 <body>
   <div class="topnav">
     <span class="topnavLeft">
-      <a href="#today"><i class="fas fa-bars"></i></a>
+      <a href="#today" class="toggleSidebarButton"><i class="fas fa-bars"></i></a>
     </span>
     
     <span class="topnavRight">
@@ -23,19 +23,30 @@
   </div>
 
   <!-- Side navigation -->
-  <div class="sidenav">
+  <div class="sidenav openSidebar">
     <a href="#"><i class="fas fa-inbox"></i> Inbox</a>
     <a href="#"><i class="far fa-calendar"></i> Today</a>
     <a href="#"><i class="fas fa-calendar-week"></i> Next 7 Days</a>
   </div>
 
-  <div class="mainContainer">
+  <div class="mainContainer openMainContainer">
     <div class="listDateInfo">
       <span class="listType">Today</span>
       <span class="listDate">Mon Aug 16</span>
     </div>
     
-    <div class="taskList"></div>
+    <div class="taskList">
+
+      <!--
+        <div class="taskItem">
+        <label class="container">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          <span class="taskNameName">One</span>
+        </label>
+      </div>
+      -->
+    </div>
 
     <div class="addTaskForm hidden">
       <form class="form">

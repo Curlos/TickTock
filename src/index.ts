@@ -8,7 +8,9 @@ const addTaskFormFinalOptions = document.querySelector('.addTaskFormFinalOptions
 const addTaskFormButton = document.querySelector('.addTaskFormButton')
 const displayFormButton = document.querySelector('.displayFormButton')
 const cancelFormButton = document.querySelector('.cancelFormButton')
-const allTasks = []
+const checkboxes: NodeListOf<Element> = document.querySelectorAll('.taskItem input')
+const toggleSidebarButton = document.querySelector('.toggleSidebarButton')
+const allTasks: Array<TodoItem> = []
 
 
 const displayNewTask = () => {
@@ -46,23 +48,33 @@ const toggleAddTaskForm = () => {
   displayFormButton.classList.toggle('hidden')
 }
 
-const generateDefaultTasks = () => {
-  const defaultTasks = ['click on initial addTask button displays addTaskForm and makes the initial addTask button hidden', 'click on cancel button makes addTaskForm hidden and initial addTaskButton visible again', 'user can click add task button to show add task form', 'style checkbox input buttons to be round']
-
-  for (let task of defaultTasks) {
-    taskNameInput.value = task
-    displayNewTask()
-  }
+const completeTask = () => {
+  
 }
 
+const generateDefaultTasks = () => {
+  const defaultTasks = ['click on initial addTask button displays addTaskForm and makes the initial addTask button hidden', 'click on cancel button makes addTaskForm hidden and initial addTaskButton visible again', 'user can click add task button to show add task form', 'style checkbox input buttons to be round']
+  
+  defaultTasks.forEach((taskName) => {
+    const task = new TodoItem(taskName, false, '', '', [''], '')
+    allTasks.push(task)
+    taskNameInput.value = taskName
+    displayNewTask()
+  })
+
+  console.log(allTasks)
+}
+
+const toggleSidebar = () => {
+  document.querySelector<HTMLElement>(".sidenav").classList.toggle('openSidebar')
+  document.querySelector<HTMLElement>(".mainContainer").classList.toggle('openMainContainer')
+}
+
+checkboxes.forEach((checkbox) => checkbox.addEventListener('click', completeTask))
+toggleSidebarButton.addEventListener('click', toggleSidebar)
 displayFormButton.addEventListener('click', toggleAddTaskForm)
 addTaskFormButton.addEventListener('click', addTask)
 formForAddTaskForm.addEventListener('submit', addTask)
 cancelFormButton.addEventListener('click', toggleAddTaskForm)
 
-const task = new TodoItem('new task', false, '', '', [''], '')
-allTasks.push(task)
-console.log(task)
-
-console.log('hello faggot bitch')
 generateDefaultTasks()

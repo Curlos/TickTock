@@ -86,3 +86,7 @@
   border: 1px solid lightgray;
   background-color: #ffffff;
 }
+
+.addTaskFormButton:hover, .cancelFormButton:hover {
+  cursor: pointer;
+}
