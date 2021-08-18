@@ -17,14 +17,26 @@ const displayNewTask = () => {
   const taskItem = document.createElement('div')
   const checkbox = document.createElement('input')
   const taskName = document.createElement('span')
+  const rightHalf = document.createElement('span')
+  const editIcon = document.createElement('i')
+  const additionalOptionsIcon = document.createElement('i')
 
   taskItem.classList.add('taskItem')
   checkbox.setAttribute('type', 'checkbox')
   taskName.classList.add('taskName')
   taskName.textContent = taskNameInput.value
+  rightHalf.classList.add('taskItemRightHalf')
+  editIcon.classList.add('far')
+  editIcon.classList.add('fa-edit')
+  additionalOptionsIcon.classList.add('fas')
+  additionalOptionsIcon.classList.add('fa-ellipsis-h')
+
+  rightHalf.append(editIcon)
+  rightHalf.append(additionalOptionsIcon)
 
   taskItem.append(checkbox)
   taskItem.append(taskName)
+  taskItem.append(rightHalf)
   taskList.append(taskItem)
 
   taskNameInput.value = ''

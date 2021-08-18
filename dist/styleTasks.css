@@ -19,6 +19,54 @@
   cursor: pointer;
 }
 
+.taskItemRightHalf {
+  float: right;
+  display: none;
+}
+
+.taskItemRightHalf i {
+  margin: 2px;
+  padding: 5px;
+  color: gray;
+}
+
+.taskItem:hover .taskItemRightHalf {
+  display: block;
+}
+
+.taskItemRightHalf i:hover {
+  background-color: lightgray;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Customize the label (the container) */
 .container {
   display: block;
